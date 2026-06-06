@@ -1,4 +1,4 @@
-# 🏎️ Elite Fleet - Premium Online Car Rental
+#  Elite Fleet - Premium Online Car Rental
 
 > **Live Deployment:** [Link to be added here]()
 
@@ -6,7 +6,7 @@ Welcome to **Elite Fleet**, a cutting-edge luxury car rental platform built with
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -23,7 +23,7 @@ Welcome to **Elite Fleet**, a cutting-edge luxury car rental platform built with
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Immersive 3D Vehicle Showroom:** Built with React Three Fiber (`@react-three/fiber` & `@react-three/drei`), interact with fully 3D rendered premium vehicles (Jeep Gladiator, Porsches, etc.) directly on the homepage and login screens.
 - **Cinematic Animations:** Powered by `framer-motion` for buttery smooth reveal animations, hover states, and premium editorial micro-interactions.
@@ -31,7 +31,7 @@ Welcome to **Elite Fleet**, a cutting-edge luxury car rental platform built with
 - **Automated Booking:** Seamlessly pick dates and reserve your dream car using secure payment gateways (Stripe integration).
 - **Responsive Luxury Design:** A dark-mode, glassmorphism-heavy UI utilizing bespoke typography (`Syncopate`, `Outfit`, `Inter`) for a high-end brand feel.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js installed
@@ -67,5 +67,5 @@ Welcome to **Elite Fleet**, a cutting-edge luxury car rental platform built with
    ```
    *This will concurrently start the Express server and the React frontend.*
 
-## 📝 License
+##  License
 This project is for demonstration and portfolio purposes. All rights to the 3D models and vehicle brands remain with their respective owners.
