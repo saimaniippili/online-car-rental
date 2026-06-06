@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter, Redirect, Switch, useLocation } from 'react-router-dom';

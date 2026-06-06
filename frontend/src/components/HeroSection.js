@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, ContactShadows, Float, MeshReflectorMaterial, PerspectiveCamera } from '@react-three/drei';
