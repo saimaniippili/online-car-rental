@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap');
+
+:root {
+  --bg-color: #050505;
+  --bg-secondary: #0B0B0B;
+  --surface: #111111;
+  --accent: #E63946;
+  --accent-secondary: #FF4D4D;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --glass-bg: rgba(17, 17, 17, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glow: 0 0 20px rgba(230, 57, 70, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+body, html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent) !important;
+}
+
+/* Luxury Layouts */
+.section-padding {
+  padding: clamp(50px, 8vw, 100px) 5%;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+/* Glassmorphism & Surface */
+.glass-card, .luxury-card {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 4px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8), var(--glow);
+}
+
+.luxury-card:hover::before {
+  opacity: 1;
+  background: linear-gradient(135deg, var(--accent), rgba(255,255,255,0));
+}
+
+/* Buttons */
+.premium-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent) !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 18px 45px 14px 45px !important;
+  min-height: 48px !important;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-shadow: none !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* Left Headlight Shape: Top slopes UP, Left edge slightly angled */
+  clip-path: polygon(0 15px, 100% 0, 100% 100%, 10px 100%);
+  filter: drop-shadow(-5px 5px 15px rgba(230,57,70,0.4));
+}
+
+.premium-btn:hover {
+  background: #ff4d5a !important;
+  letter-spacing: 6px;
+  filter: drop-shadow(-10px 10px 25px rgba(230,57,70,0.8));
+  transform: scale(1.02);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1) !important;
+  border: none !important;
+  padding: 18px 45px 14px 45px !important;
+  min-height: 48px !important;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  /* Right Headlight Shape: Top slopes DOWN, Right edge slightly angled */
+  clip-path: polygon(0 0, 100% 15px, calc(100% - 10px) 100%, 0 100%);
+  filter: drop-shadow(5px 5px 15px rgba(255,255,255,0.1));
+}
+
+.btn-outline:hover {
+  background: #fff !important;
+  color: #000 !important;
+  letter-spacing: 6px;
+  filter: drop-shadow(10px 10px 25px rgba(255,255,255,0.4));
+  transform: scale(1.02);
+}
+
+/* User Badge Button */
+.user-badge-btn {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 30px !important;
+  backdrop-filter: blur(10px);
+  color: #fff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  padding: 0 25px !important;
+  height: 45px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.user-badge-btn:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.3) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+}
+
+.user-badge-btn .anticon {
+  margin-right: 8px;
+}
+
+/* Navbar */
+.luxury-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 20px 5%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.luxury-header.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 15px 5%;
+}
+
+.brand-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff !important;
+}
+
+.brand-logo span {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.hero-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding-left: 8%;
+  max-width: 800px;
+  pointer-events: none;
+}
+
+.hero-content > * {
+  pointer-events: auto;
+}
+
+.hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-secondary);
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+/* Fleet Cards */
+.img-container {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover .carimg {
+  transform: scale(1.1);
+}
+
+.car-title {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-category {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.car-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.car-price span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Ant Design Overrides */
+.ant-picker {
+  background: var(--surface) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 2px;
+}
+.ant-picker-input > input {
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
+}
+.ant-picker-suffix, .ant-picker-separator {
+  color: var(--text-secondary) !important;
+}
+
+/* Spinner */
+.spinner {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Backwards compatibility */
+.btn1 {
+  background-color : transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--glass-border) !important;
+  padding: 8px 20px !important;
+  outline: none !important;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn1:hover {
+  border-color: var(--text-primary) !important;
+}
+
+.bs1 {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.login {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.login-form {
+  background-color: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 40px;
+}
+.login-form label { color: var(--text-secondary) !important; }
+.login-form input {
+  background-color: #000 !important;
+  border: 1px solid var(--glass-border) !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+  padding: 10px !important;
+}
+.carimg2 {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Footer */
+.luxury-footer {
+  background: #000;
+  border-top: 1px solid var(--glass-border);
+  padding: 60px 5% 20px;
+  text-align: center;
+}
+
+/* Minimal Fleet Card */
+.fleet-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 4px;
+}
+.fleet-card:hover {
+  transform: translateY(-10px);
+}
+.fleet-card:hover .carimg {
+  transform: scale(1.05);
+}
+
+/* Ant Design Dropdown Menu Overrides */
+.ant-dropdown-menu {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+}
+
+.ant-dropdown-menu-item {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+.ant-dropdown-menu-item:hover, .ant-dropdown-menu-item-active {
+  background-color: #E63946 !important;
+  color: #fff !important;
+}
+
+.ant-dropdown-menu-item a {
+  color: #fff !important;
+}
+
+.ant-dropdown-menu-item:hover a {
+  color: #fff !important;
+}
+
+/* 3D Fleet Section Background Glow */
+#fleet::before {
+  content: '';
+  position: absolute;
+  top: 20%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw; height: 60vw;
+  background: radial-gradient(circle, rgba(230,57,70,0.1) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Base Responsive Breakpoints */
+@media (max-width: 1440px) {
+  /* Minor layout adjustments for smaller desktop */
+}
+
+@media (max-width: 1280px) {
+  /* Smaller desktops */
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+  .hero-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-canvas {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+  }
+  .login {
+    flex-direction: column !important;
+    padding-top: 50px;
+  }
+  .login-form {
+    width: 90% !important;
+    margin: 0 auto;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-header {
+    padding: 15px 5%;
+  }
+  .premium-btn, .btn-outline {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 18px 20px 14px 20px !important;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  /* Phone Pro Max */
+  .hero-canvas {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 390px) {
+  /* Phone */
+}
+
+@media (max-width: 375px) {
+  /* Small Phone */
+}
+
+@media (max-width: 320px) {
+  /* Mini Phone */
+}

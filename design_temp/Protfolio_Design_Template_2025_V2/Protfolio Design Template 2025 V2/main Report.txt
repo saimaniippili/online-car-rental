@@ -1,0 +1,67 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: main.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1400 px x 791.9126 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Acumin Variable Concept Default (OTF)
+Acumin Variable Concept Black (OTF)
+Metropolis Light (OTF)
+Whispers Regular (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\Graphiqvibe\freelace\Delish\FINAL-LOGO.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 25753K, 2154 by 4081 pixels
+Dimensions: 1053.435 by 1995.853 points 
+Resolution: 147.221 by 147.221 pixels per inch
+
+
+D:\Graphiqvibe\freelace\Delish\FINAL-LOGO.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 25753K, 2154 by 4081 pixels
+Dimensions: 775.204 by 1468.712 points 
+Resolution: 200.061 by 200.061 pixels per inch
+
+
+D:\Graphiqvibe\freelace\Delish\FINAL-LOGO.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 25753K, 2154 by 4081 pixels
+Dimensions: 466.022 by 882.932 points 
+Resolution: 332.791 by 332.791 pixels per inch
