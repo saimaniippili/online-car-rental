@@ -49,7 +49,20 @@ function DefaultLayout(props) {
 
   return (
     <div>
-      <header className={`luxury-header ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`luxury-header ${scrolled ? 'scrolled' : ''}`} style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          padding: scrolled ? '15px 5%' : '30px 5%',
+          background: scrolled ? 'rgba(5, 5, 5, 0.8)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(20px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.05)' : '1px solid transparent',
+          transition: 'all 0.4s ease',
+          zIndex: 1000,
+          display: 'flex',
+          alignItems: 'center'
+      }}>
         {/* Left: Logo */}
         <div className="brand-logo" style={{ flex: 1 }}>
           <Link to='/' style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>

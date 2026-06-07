@@ -43,7 +43,13 @@ function Home() {
 
                   {/* LIGHT MODE: Fleet Section */}
                   <div id="fleet" className="content-container theme-light" style={{ background: '#f9f9f9', paddingBottom: '80px', paddingTop: '80px', position: 'relative' }}>
-                      <div style={{ paddingBottom: '40px', position: 'relative', zIndex: 3, maxWidth: '1400px', margin: '0 auto', padding: '0 5%' }}>
+                      <motion.div 
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "-100px" }}
+                          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                          style={{ paddingBottom: '40px', position: 'relative', zIndex: 3, maxWidth: '1400px', margin: '0 auto', padding: '0 5%' }}
+                      >
                           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', letterSpacing: '2px', color: '#666', textTransform: 'uppercase', marginBottom: '10px' }}>OUR FLEET</p>
                           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 500, color: '#111', margin: '0 0 40px 0' }}>Choose Your Dream Drive</h2>
                           
@@ -72,7 +78,7 @@ function Home() {
                                  </div>
                              </div>
                           </div>
-                      </div>
+                      </motion.div>
 
                       {loading == true && (<Spinner/>)}
 
@@ -129,7 +135,13 @@ function Home() {
 
                   {/* DARK MODE: How It Works */}
                   <div className="section-padding" style={{ backgroundColor: '#050505', paddingTop: '100px', paddingBottom: '100px' }}>
-                      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+                      <motion.div 
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true, margin: "-100px" }}
+                          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                          style={{ maxWidth: '1400px', margin: '0 auto' }}
+                      >
                           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.8rem', letterSpacing: '2px', color: '#888', textTransform: 'uppercase', marginBottom: '10px' }}>HOW IT WORKS</p>
                           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 3.5vw, 3.5rem)', fontWeight: 500, color: '#fff', margin: '0 0 80px 0', lineHeight: 1.1 }}>
                               Your Journey, <br/>Simplified
@@ -155,7 +167,7 @@ function Home() {
                           <button style={{ marginTop: '60px', background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', padding: '15px 35px', fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', letterSpacing: '2px', fontWeight: 600, cursor: 'pointer' }}>
                               BOOK YOUR CAR
                           </button>
-                      </div>
+                      </motion.div>
                   </div>
 
                   {/* DARK MODE: Testimonials */}
