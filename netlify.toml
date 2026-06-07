@@ -1,0 +1,9 @@
+[build]
+  base = "frontend"
+  publish = "build"
+  command = "npm run build"
+
+[build.environment]
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
+  NODE_OPTIONS = "--max_old_space_size=4096"
