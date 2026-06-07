@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { userRegister } from "../redux/actions/userActions";
 import Spinner from '../components/Spinner';
+import premiumHeroBg from '../components/premium_hero_bg.png';
 
 function Register() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -69,7 +70,7 @@ function Register() {
                 zIndex: 1
             }}></div>
             
-            <div style={{ position: 'relative', zIndex: 2, width: '100%', height: '100%', backgroundImage: `url(${require('../components/premium_hero_bg.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div style={{ position: 'relative', zIndex: 2, width: '100%', height: '100%', backgroundImage: `url(${premiumHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             </div>
         </Col>
 
